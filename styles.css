@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Technical Writing - Examples</title>
+    <title>local_css</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -45,14 +45,4 @@ footer {
 }
 </style>
 </head>
-<body>
-
-<div class="row">
-    <div class="container">
-        <h1>David M. Morgan, Ph.D.</h1>
-        <h3>Computing in the Classroom</h3>
-    </div>
-</div>
-
-</body>
 </html>
