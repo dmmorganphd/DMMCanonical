@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+        "HTMLFiles/xhtml-math11-f.dtd">
+
+<!-- Created with the Wolfram Language : www.wolfram.com -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>
+  Cardiod-Arc-en-Ciel
+ </title>
+ <link href="HTMLFiles/Cardiod-Arc-en-Ciel.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<p class="Title">
+ Cardiod Arc-en-Ciel
+</p>
+
+
+
+<p class="Text">
+ June 20, 2020<br />David M. Morgan, Ph.D.<br />Antigonish Landing, NS B2G 2L2 Canada<br />dmmorgan@gmail.com
+</p>
+
+
+
+<p class="Text">
+ <span class="SubsubsectionInline">Algorithm: </span>
+</p>
+
+
+
+<p class="Text">
+ From:<br /><br />http://mathworld.wolfram.com/Cardioid.html<br /><br />The cardioid may also be generated as follows. Draw a circle C and fix a point A on it. Now draw a set of circles centered on the&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;circumference of C and passing through A. The envelope of these circles is then a cardioid (Pedoe 1995). 
+</p>
+
+
+
+<p class="Text">
+ <span class="SubsubsectionInline">Code:</span>
+</p>
+
+
+
+<p class="Text">
+ Define the circle C and an arbitrary point A:
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_1.gif" alt="Cardiod-Arc-en-Ciel_1.gif" width="284" height="128" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_2.png" alt="Cardiod-Arc-en-Ciel_2.png" width="824" height="348" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_3.png" alt="Cardiod-Arc-en-Ciel_3.png" width="45" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ For each point in CircleCPoints, construct a circle with that point as its centre such that it passes through A; each circle must satisfy:<br /><br /><span><span><img src="HTMLFiles/Cardiod-Arc-en-Ciel_4.png" alt="Cardiod-Arc-en-Ciel_4.png" width="12" height="20" style="vertical-align:middle" /></span></span>=<span><span><img src="HTMLFiles/Cardiod-Arc-en-Ciel_5.png" alt="Cardiod-Arc-en-Ciel_5.png" width="324" height="20" style="vertical-align:middle" /></span></span><br /><br />in which x and y take on the values of PointA[[1]] and PointA[[2]], respectively, and in which <br /><br /><span style='font-style: italic;'>r</span><br /><br />is the radius of the circle in question. <br /><br />For each point in CircleCPoints, the radius of the required circle is:
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_6.png" alt="Cardiod-Arc-en-Ciel_6.png" width="687" height="89" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Give the third result as an example: 
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_7.png" alt="Cardiod-Arc-en-Ciel_7.png" width="212" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_8.png" alt="Cardiod-Arc-en-Ciel_8.png" width="208" height="37" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Formulate the equation for the upper hemisphere of each circle to be constructed in the form: <br /><br />y = <span style='font-style: italic;'>f</span>(x)<br /><br />Recalling that each circle satisfies:<br /><br /><span><span><img src="HTMLFiles/Cardiod-Arc-en-Ciel_9.png" alt="Cardiod-Arc-en-Ciel_9.png" width="12" height="20" style="vertical-align:middle" /></span></span>=<span><span><img src="HTMLFiles/Cardiod-Arc-en-Ciel_10.png" alt="Cardiod-Arc-en-Ciel_10.png" width="324" height="20" style="vertical-align:middle" /></span></span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)<br /><br />one rearranges to solve for y: <br /><br /><span><span><img src="HTMLFiles/Cardiod-Arc-en-Ciel_11.png" alt="Cardiod-Arc-en-Ciel_11.png" width="12" height="20" style="vertical-align:middle" /></span></span> - <span><span><img src="HTMLFiles/Cardiod-Arc-en-Ciel_12.png" alt="Cardiod-Arc-en-Ciel_12.png" width="155" height="20" style="vertical-align:middle" /></span></span> = <span><span><img src="HTMLFiles/Cardiod-Arc-en-Ciel_13.png" alt="Cardiod-Arc-en-Ciel_13.png" width="155" height="20" style="vertical-align:middle" /></span></span>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)<br /><br />Taking square roots of each side provides:<br /><br /><span><span><img src="HTMLFiles/Cardiod-Arc-en-Ciel_14.png" alt="Cardiod-Arc-en-Ciel_14.png" width="212" height="26" style="vertical-align:middle" /></span></span> = <span><span>(y-CircleCPoints[[i,2]])</span></span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)<br /><br />and solving for y gives:<br /><br />y = CircleCPoints[[i,2]] + <span><span><img src="HTMLFiles/Cardiod-Arc-en-Ciel_15.png" alt="Cardiod-Arc-en-Ciel_15.png" width="212" height="26" style="vertical-align:middle" /></span></span>.&nbsp;&nbsp;&nbsp;&nbsp;(4)<br /><br />Construct the equations for the upper hemisphere of each circle:
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_16.png" alt="Cardiod-Arc-en-Ciel_16.png" width="294" height="150" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Give the third result as an example. 
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_17.png" alt="Cardiod-Arc-en-Ciel_17.png" width="227" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_18.png" alt="Cardiod-Arc-en-Ciel_18.png" width="414" height="37" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Plot each upper hemisphere. Note the color formula in PlotStyle. Show the third in the list as an example. 
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_19.png" alt="Cardiod-Arc-en-Ciel_19.png" width="526" height="304" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_20.png" alt="Cardiod-Arc-en-Ciel_20.png" width="196" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_21.gif" alt="Cardiod-Arc-en-Ciel_21.gif" width="360" height="230" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Construct the equations for the lower hemisphere of each circle:<br /><br />Recalling that each circle satisfies:<br /><br /><span><span><img src="HTMLFiles/Cardiod-Arc-en-Ciel_22.png" alt="Cardiod-Arc-en-Ciel_22.png" width="12" height="20" style="vertical-align:middle" /></span></span>=<span><span><img src="HTMLFiles/Cardiod-Arc-en-Ciel_23.png" alt="Cardiod-Arc-en-Ciel_23.png" width="324" height="20" style="vertical-align:middle" /></span></span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)<br /><br />one rearranges to solve for y: <br /><br /><span><span><img src="HTMLFiles/Cardiod-Arc-en-Ciel_24.png" alt="Cardiod-Arc-en-Ciel_24.png" width="12" height="20" style="vertical-align:middle" /></span></span> - <span><span><img src="HTMLFiles/Cardiod-Arc-en-Ciel_25.png" alt="Cardiod-Arc-en-Ciel_25.png" width="155" height="20" style="vertical-align:middle" /></span></span> = <span><span><img src="HTMLFiles/Cardiod-Arc-en-Ciel_26.png" alt="Cardiod-Arc-en-Ciel_26.png" width="155" height="20" style="vertical-align:middle" /></span></span>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)<br /><br />Taking square roots of each side, and, this time, taking the <span style='font-style: italic;'>negative </span>root of the right hand side,&nbsp;&nbsp;provides:<br /><br /><span><span><img src="HTMLFiles/Cardiod-Arc-en-Ciel_27.png" alt="Cardiod-Arc-en-Ciel_27.png" width="212" height="26" style="vertical-align:middle" /></span></span> = - <span><span>(y-CircleCPoints[[i,2]])</span></span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(5)<br /><br />and solving for y gives:<br /><br />y = CircleCPoints[[i,2]] - <span><span><img src="HTMLFiles/Cardiod-Arc-en-Ciel_28.png" alt="Cardiod-Arc-en-Ciel_28.png" width="212" height="26" style="vertical-align:middle" /></span></span>.&nbsp;&nbsp;&nbsp;&nbsp;(6)
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_29.png" alt="Cardiod-Arc-en-Ciel_29.png" width="294" height="172" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ Plot each lower hemisphere. Show the third in the list as an example. 
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_30.png" alt="Cardiod-Arc-en-Ciel_30.png" width="526" height="304" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_31.png" alt="Cardiod-Arc-en-Ciel_31.png" width="196" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_32.gif" alt="Cardiod-Arc-en-Ciel_32.gif" width="360" height="230" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_33.gif" alt="Cardiod-Arc-en-Ciel_33.gif" width="300" height="458" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_34.gif" alt="Cardiod-Arc-en-Ciel_34.gif" width="864" height="864" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/Cardiod-Arc-en-Ciel_35.png" alt="Cardiod-Arc-en-Ciel_35.png" width="117" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ VisibleSpectrum!!
+</p>
+
+
+
+<p class="Text">
+ Play around in ColorFunction space.
+</p>
+
+
+
+
+
+
+<div style="font-family:Helvetica; font-size:11px; width:100%; border:1px none #999999; border-top-style:solid; padding-top:2px; margin-top:20px;">
+ <a href="http://www.wolfram.com/language/" style="color:#000; text-decoration:none;">
+  <span style="color:#555555">Created with the Wolfram Language</span> 
+ </a>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10179,        294]
+NotebookOptionsPosition[      8621,        262]
+NotebookOutlinePosition[      9013,        278]
+CellTagsIndexPosition[      8970,        275]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Michaelis \[Dash] Menten Enzyme Kinetics", "Title",
+ CellChangeTimes->{
+  3.92991185984476*^9},ExpressionUUID->"1c1d1dff-01dc-4c81-8020-393bbacd9cf2"],
+
+Cell[CellGroupData[{
+
+Cell["Section 1: Derivation of the Michaelis \[Dash] Menten Equation", \
+"Section",
+ CellChangeTimes->{
+  3.92991572593601*^9},ExpressionUUID->"753bc76f-1298-4b5d-b8ba-fcd1d0749434"],
+
+Cell["\<\
+The fundamental (and simplest) mechanism for the enzymatic transformation of \
+a substrate into
+a product is:\
+\>", "Text",
+ CellChangeTimes->{
+  3.9299158386396637`*^9},ExpressionUUID->"0340f950-b486-4922-b2df-\
+c119b6e358e6"],
+
+Cell[TextData[{
+ "\t",
+ StyleBox["E + S ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   UnderoverscriptBox["\[Equilibrium]", 
+    SubscriptBox["k", "r"], 
+    SubscriptBox["k", "f"]], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24,ExpressionUUID->"0080f336-2d42-4b0f-9fd4-d60c9475b801"],
+ " ",
+ StyleBox["ES ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["\[LongRightArrow]", 
+    SubscriptBox["k", "cat"]], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24,ExpressionUUID->"3c5b1d38-5106-4f06-8b66-2c5102c8c0df"],
+ StyleBox[" E + P",
+  FontSize->24]
+}], "Text",
+ CellChangeTimes->{{3.929915867037097*^9, 3.929916030316771*^9}, {
+  3.929916476717811*^9, 
+  3.929916484108189*^9}},ExpressionUUID->"3ed63f49-ec82-4457-b490-\
+6f99de567559"],
+
+Cell[TextData[{
+ "in which E is the enzyme, S is the substrate, ES is the \
+enzyme\[Dash]substrate complex, P is the\nproduct, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "f"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "d8b434a1-5bac-4b3a-94de-d526743a36c3"],
+ " is the rate constant for the formation of ES from E and S, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "r"], TraditionalForm]],ExpressionUUID->
+  "3381db00-06c5-41f9-8729-28c88c067b06"],
+ " is the rate constant for the\ndissociation of ES into E and S, and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", 
+    StyleBox["cat",
+     FontSlant->"Italic"]], TraditionalForm]],ExpressionUUID->
+  "572289cc-0e4c-4987-8ded-8bd5751b2ac9"],
+ " is the rate constant for the chemical step which converts\nES into E and \
+P.\n\nIn enzyme kinetics, one is interested in describing the rate at which \
+product is formed. With\nrespect to the mechanism above, this is:"
+}], "Text",
+ CellChangeTimes->{{3.9299160832560167`*^9, 3.929916168773744*^9}, {
+  3.929916236211025*^9, 3.929916262099319*^9}, {3.929916570390708*^9, 
+  3.9299165748506403`*^9}},ExpressionUUID->"6829153f-99f1-4980-b36b-\
+aa338af779ba"],
+
+Cell[TextData[{
+ StyleBox["\t(1)\tv = ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", "P"}], 
+    RowBox[{"\[DifferentialD]", "t"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24,ExpressionUUID->"e6937a53-270c-403f-a4bc-b21c8f0b4b11"],
+ " ",
+ StyleBox["= ",
+  FontSize->24],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "cat"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->24,ExpressionUUID->"db934db0-7295-4e19-adf3-b80039b9f252"],
+ StyleBox[" ES",
+  FontSize->24]
+}], "Text",
+ CellChangeTimes->{{3.9299164118496523`*^9, 3.9299164618859262`*^9}, {
+  3.929916500042104*^9, 3.929916511124324*^9}, {3.929916541420232*^9, 
+  3.929916559013857*^9}, {3.929917039989455*^9, 
+  3.9299170407772493`*^9}},ExpressionUUID->"c5ee6dd3-65c5-4600-a50d-\
+d3f3aca08919"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"v", " ", "=", " ", 
+  RowBox[{"kcat", " ", "ES"}]}]], "Input",
+ CellChangeTimes->{{3.9299172259080353`*^9, 3.9299172333706827`*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"14a3ab95-9e81-49a9-bffb-7f5f9017a259"],
+
+Cell[BoxData[
+ RowBox[{"ES", " ", "kcat"}]], "Output",
+ CellChangeTimes->{3.929917236414298*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"4ea8b185-b469-44e6-a666-fb065586caa6"]
+}, Open  ]],
+
+Cell["\<\
+In biochemistry the convention is to refer to this rate as v, the reaction \
+velocity. From the above,
+it is clear that an expression for the instantaneous concentration of ES is \
+required to describe the
+velocity. One carries out derivations so that expressions are produced which \
+involve
+experimentally controllable variables; in the case of enzyme kinetics, these \
+are the total enzyme
+concentration and the total substrate concentration. (The other elements of \
+the expressions so
+produced, such as kf, kr, and kcat, are called parameters. They are deduced \
+from experimental
+data, and usually relate to the fundamental chemistry that is going on. For \
+example, if an enzyme
+converts S into P faster than another enzyme, the first enzyme has a larger \
+kcat.) Thus, an
+algebraic statement for the instantaneous concentration of ES is required in \
+terms of total enzyme
+and total substrate concentration, and the other parameters. That expression \
+is produced as a
+consequence of the rate equation for ES:\
+\>", "Text",
+ CellChangeTimes->{
+  3.9299163036291237`*^9},ExpressionUUID->"c3ecf4ce-72cc-441c-a262-\
+7125369b499f"],
+
+Cell[TextData[{
+ "\t",
+ StyleBox["(2)",
+  FontSize->24],
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     StyleBox["ES",
+      FontSlant->"Italic"]}], 
+    RowBox[{"\[DifferentialD]", "t"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "b2ab13bf-1597-4f31-aafd-c202b2b710cc"],
+ "= ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "f"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "ea099792-b2bb-48b8-94a8-72e62f48afb0"],
+ "E S - ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "r"], TraditionalForm]],ExpressionUUID->
+  "e1308eb4-fed9-428d-aa3a-f169f87be86c"],
+ "ES - ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "cat"], TraditionalForm]],ExpressionUUID->
+  "d5f082ef-e7ed-4bf1-a9be-f86f798b9582"],
+ "ES"
+}], "Text",
+ CellChangeTimes->{{3.929916645486196*^9, 3.929916742923192*^9}, {
+  3.9299170470541573`*^9, 3.9299170506161613`*^9}},
+ FontSize->24,ExpressionUUID->"48b62f99-d85f-4654-87cc-5bd7f3e93dc1"],
+
+Cell[TextData[{
+ "This is a mathematical assertion that ES forms from E and S according to ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "f"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "f5e8625a-7e0d-4d99-acba-5e4c456c2877"],
+ ", falls apart again into\nE and S according to ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "r"], TraditionalForm]],ExpressionUUID->
+  "a2900901-a34e-4afd-b92e-44352a7cd879"],
+ ", and is converted into E and P according to ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["k", "cat"], TraditionalForm]],ExpressionUUID->
+  "9f24a50a-7721-4951-80cc-2320481086f9"],
+ ". In light of the fact that\nES is being constantly formed and constantly \
+degraded, it is reasonable to assume (!) that its\nconcentration is small. A \
+concentration which is small cannot change much. Thus, it is reasonable to \
+make\n\[OpenCurlyQuote]the steady state approximation for ES,\
+\[CloseCurlyQuote] an assertion that its concentration is effectively \
+constant over time:"
+}], "Text",
+ CellChangeTimes->{{3.929916805176458*^9, 
+  3.929916911136115*^9}},ExpressionUUID->"f672de42-c04c-476e-b509-\
+4496a6a59c94"],
+
+Cell[TextData[{
+ "\t",
+ StyleBox["(3)",
+  FontSize->24],
+ "\t",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[DifferentialD]", 
+     StyleBox["ES",
+      FontSlant->"Italic"]}], 
+    RowBox[{"\[DifferentialD]", "t"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "22ef268d-8534-45ff-903d-86899e7719d0"],
+ "= 0"
+}], "Text",
+ CellChangeTimes->{{3.929916967198423*^9, 3.9299169942817907`*^9}, {
+  3.929917057730248*^9, 3.929917062059341*^9}},
+ FontSize->24,ExpressionUUID->"a80b6ec6-e0c1-4f2e-a608-5d19b8730d26"],
+
+Cell["\<\
+Combining (2) and (3) and isolating rate constants provides the intermediate \
+result:\
+\>", "Text",
+ CellChangeTimes->{
+  3.929917095359517*^9, {3.9299174725571413`*^9, 
+   3.929917503327607*^9}},ExpressionUUID->"0b74c6d0-5b43-4e7e-ba5d-\
+7f7b750f54fb"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{911, 965},
+WindowMargins->{{Automatic, 129}, {Automatic, 165}},
+FrontEndVersion->"12.1 for Linux x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"15a5c83d-26c6-4b1f-b852-a37931d30d3e"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 156, 2, 98, "Title",ExpressionUUID->"1c1d1dff-01dc-4c81-8020-393bbacd9cf2"],
+Cell[CellGroupData[{
+Cell[761, 28, 182, 3, 67, "Section",ExpressionUUID->"753bc76f-1298-4b5d-b8ba-fcd1d0749434"],
+Cell[946, 33, 237, 7, 58, "Text",ExpressionUUID->"0340f950-b486-4922-b2df-c119b6e358e6"],
+Cell[1186, 42, 791, 26, 74, "Text",ExpressionUUID->"3ed63f49-ec82-4457-b490-6f99de567559"],
+Cell[1980, 70, 1196, 27, 173, "Text",ExpressionUUID->"6829153f-99f1-4980-b36b-aa338af779ba"],
+Cell[3179, 99, 842, 25, 52, "Text",ExpressionUUID->"c5ee6dd3-65c5-4600-a50d-d3f3aca08919"],
+Cell[CellGroupData[{
+Cell[4046, 128, 234, 4, 30, "Input",ExpressionUUID->"14a3ab95-9e81-49a9-bffb-7f5f9017a259"],
+Cell[4283, 134, 174, 3, 34, "Output",ExpressionUUID->"4ea8b185-b469-44e6-a666-fb065586caa6"]
+}, Open  ]],
+Cell[4472, 140, 1145, 25, 265, "Text",ExpressionUUID->"c3ecf4ce-72cc-441c-a262-7125369b499f"],
+Cell[5620, 167, 1003, 34, 52, "Text",ExpressionUUID->"48b62f99-d85f-4654-87cc-5bd7f3e93dc1"],
+Cell[6626, 203, 1151, 26, 127, "Text",ExpressionUUID->"f672de42-c04c-476e-b509-4496a6a59c94"],
+Cell[7780, 231, 546, 18, 52, "Text",ExpressionUUID->"a80b6ec6-e0c1-4f2e-a608-5d19b8730d26"],
+Cell[8329, 251, 264, 7, 35, "Text",ExpressionUUID->"0b74c6d0-5b43-4e7e-ba5d-7f7b750f54fb"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

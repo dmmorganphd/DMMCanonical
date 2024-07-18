@@ -17,6 +17,10 @@ h1,h2,h3,h4,h5,h6 {color:#008080;}
   width: 33.33%;
   padding: 5px;
 }
+.centered-image-container {
+  display: flex;
+  justify-content: center;
+}
 .qimg-container {
   float: left;
   width: 25%;
@@ -42,6 +46,9 @@ footer {
   padding: 3px;
   background-color: DarkSalmon;
   color: white;
+}
+ip{
+   text-indent:50px;
 }
 </style>
 </head>

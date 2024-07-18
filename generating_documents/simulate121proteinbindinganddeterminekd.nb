@@ -1,0 +1,110 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[      4087,        109]
+NotebookOptionsPosition[      3322,         85]
+NotebookOutlinePosition[      3792,        102]
+CellTagsIndexPosition[      3749,         99]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "In the chemical equation:\n\n\t",
+ StyleBox["LL + RR \[Equilibrium] CC",
+  FontSize->18],
+ "\n\nlet the symbols have the following meanings:\n\n",
+ Cell[BoxData[GridBox[{
+    {"Symbol", "Referent"},
+    {"LL", 
+     RowBox[{
+     "equilibrium", " ", "concentration", " ", "of", " ", "receptor", " ", 
+      "protein", " ", "that", " ", "occurs", " ", "as", " ", "the", " ", 
+      "free", " ", "protein", " ", "in", " ", "solution"}]},
+    {"RR", 
+     RowBox[{
+     "equilibrium", "  ", "concentration", " ", "of", " ", "ligand", " ", 
+      "protein", " ", "that", " ", "occurs", " ", "as", " ", "the", " ", 
+      "free", " ", "protein", " ", "in", " ", "solution"}]},
+    {"CC", 
+     RowBox[{"equilibrium", " ", "concentration", " ", "of", " ", 
+      RowBox[{"ligand", ":", 
+       RowBox[{
+       "receptor", " ", "complex", " ", "that", " ", "occurs", " ", "in", " ",
+         "solution"}]}]}]}
+   },
+   GridBoxDividers->{
+    "Columns" -> {False, {True}, False}, "Rows" -> {False, {True}, False}}]],
+  FontFamily->"Source Sans Pro",ExpressionUUID->
+  "c50ccb32-c0ba-416d-afd7-f61623e9b145"],
+ "\n\nCreate the object \[OpenCurlyQuote]system,\[CloseCurlyQuote] the \
+algebraic definition of the dissociation constant using the terms above:"
+}], "Text",
+ CellChangeTimes->{{3.929905354907916*^9, 3.9299053687843924`*^9}, 
+   3.929905465615679*^9, {3.9299055314879303`*^9, 3.92990554400246*^9}, {
+   3.9299055979880733`*^9, 3.929905599985635*^9}, {3.929905677812851*^9, 
+   3.929905762457378*^9}, {3.929905795645997*^9, 
+   3.9299057986652317`*^9}},ExpressionUUID->"8a6e1bfb-8fb0-4a0b-8afa-\
+59fad3ad2a46"],
+
+Cell[BoxData[
+ RowBox[{"system", " ", "=", " ", 
+  RowBox[{"KD", " ", "\[Equal]", " ", 
+   RowBox[{"LL", " ", 
+    RowBox[{"RR", " ", "/", " ", "CC"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.929904138927416*^9, 3.9299041598124733`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"6488b265-bc56-45ab-97a7-1eb35556fe6e"],
+
+Cell[TextData[{
+ "Experimenters typically have control over ",
+ StyleBox["total",
+  FontSlant->"Italic"],
+ " receptor and ligand concentrations in the solutions they prepare; chemical \
+physics provides for their equilibrium concentrations. So, if a dissociation \
+constant is unknown the experimenter needs an equation relating ",
+ StyleBox["total ",
+  FontSlant->"Italic"],
+ "ligand and receptor \n \n\t",
+ StyleBox["LLT = LL + CC",
+  FontSize->18],
+ "\n\nand the ",
+ StyleBox["total",
+  FontSlant->"Italic"],
+ " concentration of receptor in solution is:\n\n\t",
+ StyleBox["RRT = RR + CC.\n\nThese may be rearranged, respectively, to:\n\n\t\
+LL = LLT - CC\n\nand:\n\n\tRR = RRT - CC .\n\t\n\n\n\t\n",
+  FontSize->18],
+ "\n\n"
+}], "Text",
+ CellChangeTimes->{{3.9299058264438753`*^9, 3.9299058900825233`*^9}, {
+  3.9299059461413507`*^9, 3.929906078350834*^9}, {3.9299061618603277`*^9, 
+  3.9299064400372458`*^9}},ExpressionUUID->"837445d5-b810-49f7-9a77-\
+d2e8b9d2d561"]
+},
+WindowSize->{744, 965},
+WindowMargins->{{214, Automatic}, {Automatic, 320}},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
+FrontEndVersion->"12.1 for Linux x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"3fabc0f3-e58f-4721-9e52-b56b81b7d555"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[400, 13, 1629, 36, 283, "Text",ExpressionUUID->"8a6e1bfb-8fb0-4a0b-8afa-59fad3ad2a46"],
+Cell[2032, 51, 313, 6, 30, "Input",ExpressionUUID->"6488b265-bc56-45ab-97a7-1eb35556fe6e"],
+Cell[2348, 59, 970, 24, 606, "Text",ExpressionUUID->"837445d5-b810-49f7-9a77-d2e8b9d2d561"]
+}
+]
+*)
+
