@@ -11,4 +11,4 @@ fi
 IFS='/'
 read -ra newarr <<< $wd
 tfn=${newarr[-1+${#newarr[@]}]}".tgz"
-tar -zcvf $tfn ${newarr[-1+${#newarr[@]}]} 
+tar --exclude="*git*" -zcvf $tfn ${newarr[-1+${#newarr[@]}]}
